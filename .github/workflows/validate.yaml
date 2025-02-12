@@ -1,5 +1,8 @@
-name: validate
-on: [pull_request]
+name: Validate
+on:
+  pull_request
+  workflow_dispatch
+
 
 jobs:
   lint:
