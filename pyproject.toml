@@ -14,8 +14,7 @@ dev = [
     "black>=25.1.0",
 ]
 
-[tool.black]
-include = '\.pyi?$'
+[black]
 exclude = '''
 /(
     \.git
