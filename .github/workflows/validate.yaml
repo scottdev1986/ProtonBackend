@@ -24,3 +24,6 @@ jobs:
 
       - name: Lint
         run: uv run black --check --verbose .
+
+      - name: Test
+        run: uv run pytest --verbose
