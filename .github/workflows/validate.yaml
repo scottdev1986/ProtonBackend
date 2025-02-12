@@ -5,10 +5,20 @@ on:
 
 
 jobs:
-  lint:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
       - uses: psf/black@stable
         with:
           options: "--check --verbose"
