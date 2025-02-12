@@ -23,7 +23,7 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Lint
-      - uses: psf/black@stable
+        uses: psf/black@stable
         with:
           options: "--check --verbose"
           src: '.'
