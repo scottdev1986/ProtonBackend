@@ -4,4 +4,4 @@ run:
 	uv run fastapi dev --reload
 
 format:
-	black --verbose .
+	uv run black --verbose .
