@@ -1,6 +1,7 @@
 .PHONY: run format test
 
 run:
+	docker-compose up -d
 	uv run fastapi dev --reload
 
 format:
